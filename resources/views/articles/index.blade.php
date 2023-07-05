@@ -1,8 +1,8 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex gap-5 text-base leading-tight">
-            <a href="{{ route('articles.index') }}" class="{{ request()->routeIs('articles.index') ? 'font-bold bg-gray-700 text-white ' : 'border border-gray-700 text-gray-800' }} px-4 py-2 rounded-lg inline-block">Daftar Artikel</a>
-            <a href="{{ route('articles.create') }}" class="{{ request()->routeIs('articles.create') ? 'font-bold bg-gray-700 text-white ' : 'border border-gray-700 text-gray-800' }} px-4 py-2 rounded-lg inline-block">Buat artikel baru</a>
+            <a href="{{ route('articles.index') }}" class="{{ request()->routeIs('articles.index') == 1 ? 'font-bold bg-gray-700 text-white' : 'border border-gray-700 text-gray-800' }} px-4 py-2 rounded-lg inline-block">Daftar Artikel</a>
+            <a href="{{ route('articles.create') }}" class="{{ request()->routeIs('articles.create') == 1 ? 'font-bold bg-gray-700 text-white' : 'border border-gray-700 text-gray-800' }} px-4 py-2 rounded-lg inline-block">Buat artikel baru</a>
         </div>
     </x-slot>
 
@@ -13,7 +13,7 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>No</th>
+                                <th></th>
                                 <th>Judul</th>
                                 <th>Action</th>
                             </tr>
